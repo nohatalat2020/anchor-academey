@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.float-right{
+    float:right;
+}
+.float-left{
+    float:left;
+}
+.clearfix{
+    clear:both;
+}
+.text-center{
+    text-align: center
+}
+
+body{
+    direction:ltr;
+    font-family: 'Poppins', sans-serif;
+	background: #baf1a1
+}
+
+
+
+
+
+/* header*/
+.header{
+	min-height: 100px;
+	background-color: #232020;
+
+}
+
+.header span i{
+	font-size: 80px;
+	color: snow;
+	margin-left: 80px;
+}
+
+.header h2{
+	color: whitesmoke;
+	margin-left: 20px;
+	
+}
+
+/* fullscreen overlay navigation */
+
+.fullpageMenu{
+    position: fixed;
+    top:-100%;
+    left:0;
+    width:100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #272121;
+    transition: .5s;
+}
+
+.fullpageMenu.active{
+	
+	top:0;
+	z-index:2
+	
+}
+
+.fullpageMenu .banner{
+    position: relative;
+    min-width: 600px;
+    height: 100%
+}
+
+
+.fullpageMenu .banner img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.fullpageMenu .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto
+}
+
+
+.fullpageMenu .nav ul {
+    position: relative
+}
+
+
+.fullpageMenu .nav ul li{
+    position: relative;
+    list-style: none;
+    padding: 0 20px;
+    margin: 5px 0;
+    overflow: hidden;
+    display: table;
+}
+
+.fullpageMenu .nav ul li a{
+    position: relative;
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1em;
+    padding-top: 12px;
+    display: inline-block;
+    transition: 1s ease-in-out;
+}
+
+
+.fullpageMenu .nav ul li a:before{
+    content: att(data-text);
+    position: absolute;
+    bottom: 100%;
+    left:0;
+    color:#f4f4f4;
+}
+
+
+.fullpageMenu .nav ul li:hover a{
+    transform: translateY(-100%);
+    color: #ff7315
+}
+
+.fullpageMenu .nav ul li :before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #ff7315;
+    transition: transform 10s ease-in-out;
+    transform: scaleY(0);
+    transform-origin: bottom
+}
+
+.fullpageMenu .nav ul li:hover :before{
+    transition: transform 10s ease-in-out;
+    transform: scaleY(1);
+    transform-origin: top
+    
+}
+
+.menuicon{
+    position: fixed;
+    top:20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: transparent url(../images/18.png);
+    background-size: 40px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 10px;
+        
+}
+
+.menuicon.active{
+    background: #232020 url(../images/18.png);
+	background-size: 40px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    z-index:3
+}
+
+
+
+
+/* end header*/
+
+/* contact us*/
+
+
+
+.form{
+	position: absolute;
+	top:100%;
+	left:50%;
+	padding:80px;
+	width:450px;
+	height: 500px;
+	transform:translate(-50%,-50%);
+	box-sizing: border-box;
+	background: rgba(0,0,0,.5)
+}
+
+.user{
+	width:200px;
+	height: 200px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top:calc(-100px/2);
+	left:122px
+		
+}
+
+
+.form h2{
+	margin-top: 40px;
+	padding: 0;
+	color: yellow;
+	text-align: center
+}
+
+
+.form p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: whitesmoke
+		
+}
+
+.form input{
+	width:100%;
+	margin-bottom: 20px;
+	
+}
+
+
+.form input[type="e-mail"],input[type="text"],textarea{
+	border:none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline:none;
+	height: 40px;
+	color: whitesmoke;
+	font-size: 15px;
+	
+}
+
+
+::placeholder{
+	color:rgba(255,255,255,.5)
+}
+
+
+.form input[type="submit"]{
+	border: none;
+	outline:none;
+	height: 40px;
+	color:#fff;
+	font-size:16px;
+	margin-top: 20px;
+	background: #f688bb;
+	cursor: pointer;
+	border-radius: 20px
+}
+
+.form input[type="submit"]:hover{
+	background: #ffe75e
+}
+
+.form a{
+	color: snow;
+	font-size:14px;
+	font-weight: bold;
+	text-decoration: none
+}
+
+
+.title{
+	
+	background: url(../images/95.jpg);
+	padding: 50px;
+	margin-top: -8px;
+	color: darkblue;
+	text-align: center
+	
+}
+
+
+.footer{
+	margin-top:600px;
+	text-align: center
+}
